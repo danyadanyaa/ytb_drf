@@ -7,12 +7,13 @@ from rest_framework_simplejwt.views import (
         TokenRefreshView,
     )
 
-from api.views import PostView, CommentView, GroupView
+from api.views import PostView, CommentView, GroupView, FollowView
 
 router = DefaultRouter()
 router.register('posts', PostView)
 router.register(r'posts/(?P<id>[^/.]+)/comments', CommentView, basename='comments')
 router.register('group', GroupView)
+router.register('follow', FollowView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

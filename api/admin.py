@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from api.models import Post, Comment
+from api.models import Post, Comment, Follow
 
 
 class PostAdmin(admin.ModelAdmin):
@@ -13,3 +13,4 @@ class PostAdmin(admin.ModelAdmin):
 # при регистрации модели Post источником конфигурации для неё назначаем класс PostAdmin
 admin.site.register(Post, PostAdmin)
 admin.site.register(Comment)
+admin.site.register(Follow)
